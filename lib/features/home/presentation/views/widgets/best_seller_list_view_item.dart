@@ -50,7 +50,13 @@ class BestSellerListViewItem extends StatelessWidget {
                 ),
                 const SizedBox(height: 3),
 
-                BookRating(),
+                Row(
+                  children: [
+                    Text('19.99 €', style: Styles.textStyle20),
+                    const Spacer(),
+                    BookRating(),
+                  ],
+                ),
               ],
             ),
           ),

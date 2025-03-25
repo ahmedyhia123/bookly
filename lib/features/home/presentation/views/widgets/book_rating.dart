@@ -3,18 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BookRating extends StatelessWidget {
-  const BookRating({super.key});
+  const BookRating({super.key, this.maa = MainAxisAlignment.start});
 
+  final MainAxisAlignment maa;
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: maa,
       children: [
-        Text('19.99 €', style: Styles.textStyle20),
-        const Spacer(),
-        Icon(FontAwesomeIcons.solidStar, color: Colors.amberAccent, size: 13),
-        const SizedBox(width: 6),
+        Icon(FontAwesomeIcons.solidStar, color: Colors.amberAccent, size: 14),
+        const SizedBox(width: 7),
         Text('4.8', style: Styles.textStyle16),
-        const SizedBox(width: 6),
+        const SizedBox(width: 7),
         Text('(4768)', style: Styles.textStyle14.copyWith(color: Colors.grey)),
       ],
     );

@@ -1,6 +1,8 @@
 import 'package:bookly/constans.dart';
 import 'package:bookly/core/utilites/styles.dart';
 import 'package:bookly/features/home/presentation/views/widgets/book_details_app_bar.dart';
+import 'package:bookly/features/home/presentation/views/widgets/book_rating.dart';
+import 'package:bookly/features/home/presentation/views/widgets/buy_bottom.dart';
 import 'package:bookly/features/home/presentation/views/widgets/custom_book_image.dart';
 import 'package:flutter/material.dart';
 
@@ -17,12 +19,12 @@ class BookDetailsViewBody extends StatelessWidget {
           BookDetailsAppBar(),
           Padding(
             padding: EdgeInsets.symmetric(
-              horizontal: screenwidth * 0.2,
-              vertical: 30,
+              horizontal: screenwidth * 0.21,
+              vertical: 20,
             ),
             child: CustomBookImage(),
           ),
-          const SizedBox(height: 13),
+          const SizedBox(height: 10),
           Text(
             'The Jungle Book',
             style: Styles.textStyle30.copyWith(
@@ -41,6 +43,10 @@ class BookDetailsViewBody extends StatelessWidget {
               ),
             ),
           ),
+          const SizedBox(height: 16),
+          BookRating(maa: MainAxisAlignment.center),
+          const SizedBox(height: 32),
+          BuyBottom(),
         ],
       ),
     );
