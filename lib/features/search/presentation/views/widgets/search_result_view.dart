@@ -3,14 +3,12 @@ import 'package:bookly/features/home/presentation/views/widgets/book_list_view_i
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class BestSellerListView extends StatelessWidget {
-  const BestSellerListView({super.key});
+class SearchResultView extends StatelessWidget {
+  const SearchResultView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      physics: const NeverScrollableScrollPhysics(),
-
       itemCount: 10,
       itemBuilder:
           (context, index) => Padding(
