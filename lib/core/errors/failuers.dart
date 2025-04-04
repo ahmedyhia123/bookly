@@ -38,8 +38,6 @@ class ServerFailure extends Failure {
         return ServerFailure(
           errorMessage: dioError.message ?? 'Something went wrong',
         );
-      default:
-        return ServerFailure(errorMessage: 'Something went wrong');
     }
   }
 
