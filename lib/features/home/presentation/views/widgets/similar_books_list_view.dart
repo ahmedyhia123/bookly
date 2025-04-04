@@ -13,7 +13,10 @@ class SimilarBooksListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.only(right: 13),
-            child: const CustomBookImage(),
+            child: const CustomBookImage(
+              urlImage:
+                  "https://nordicdesign.ca/wp-content/uploads/2020/02/book-thumbnail-300x300.jpg",
+            ),
           );
         },
       ),

@@ -18,7 +18,10 @@ class BookDetailsSection extends StatelessWidget {
             horizontal: screenwidth * 0.21,
             vertical: 20,
           ),
-          child: CustomBookImage(),
+          child: CustomBookImage(
+            urlImage:
+                'https://nordicdesign.ca/wp-content/uploads/2020/02/book-thumbnail-300x300.jpg',
+          ),
         ),
         const SizedBox(height: 10),
         Text(
