@@ -18,7 +18,6 @@ class SearchResultView extends StatelessWidget {
                 // Get.to(() => BookDetailsView());
                 GoRouter.of(context).push(AppRouter.kBookDetails);
               },
-              child: BookListViewItem(),
             ),
           ),
     );
