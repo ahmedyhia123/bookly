@@ -3,7 +3,6 @@ import 'package:bookly/core/utilites/styles.dart';
 import 'package:bookly/features/home/data/models/bookmodel/bookmodel.dart';
 import 'package:bookly/features/home/presentation/views/widgets/book_rating.dart';
 import 'package:bookly/features/home/presentation/views/widgets/custom_book_image.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class BookListViewItem extends StatelessWidget {
