@@ -47,7 +47,7 @@ class BookDetailsSection extends StatelessWidget {
         const SizedBox(height: 16),
         BookRating(maa: MainAxisAlignment.center),
         const SizedBox(height: 32),
-        BuyBottom(),
+        BuyBottom(url: bookModel.volumeInfo.previewLink!,),
       ],
     );
   }
