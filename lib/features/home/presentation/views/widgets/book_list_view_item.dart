@@ -44,7 +44,12 @@ class BookListViewItem extends StatelessWidget {
 
                 Row(
                   children: [
-                    Text('Free', style: Styles.textStyle20),
+                    Text(
+                      bookmodel.saleInfo?.saleability == 'NOT_FOR_SALE'
+                          ? 'Free'
+                          : 'Paid',
+                      style: Styles.textStyle20,
+                    ),
                     const Spacer(),
                     BookRating(),
                   ],

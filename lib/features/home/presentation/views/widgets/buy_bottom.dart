@@ -1,10 +1,11 @@
 import 'package:bookly/core/utilites/styles.dart';
+import 'package:bookly/features/home/data/models/bookmodel/bookmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class BuyBottom extends StatelessWidget {
-  const BuyBottom({super.key, required this.url});
-  final String url;
+  const BuyBottom({super.key, required this.bookmodel});
+  final Bookmodel bookmodel;
   @override
   Widget build(BuildContext context) {
     var screenWidth = MediaQuery.of(context).size.width;
@@ -23,14 +24,17 @@ class BuyBottom extends StatelessWidget {
           ),
           child: Center(
             child: Text(
-              "Free",
+              bookmodel.saleInfo?.saleability == 'NOT_FOR_SALE'
+                  ? 'Free'
+                  : 'Buy now',
               style: Styles.textStyle16.copyWith(color: Colors.black),
             ),
           ),
         ),
         GestureDetector(
           onTap: () async {
-            if (!await launchUrl(Uri.parse(url))) {
+            final Uri url = Uri.parse(bookmodel.volumeInfo.previewLink!);
+            if (!await launchUrl(url)) {
               throw Exception('Could not launch $url');
             }
           },
@@ -46,7 +50,9 @@ class BuyBottom extends StatelessWidget {
             ),
             child: Center(
               child: Text(
-                'Free preview',
+                bookmodel.volumeInfo.previewLink == null
+                    ? 'Not Available'
+                    : 'Preview',
                 style: Styles.textStyle16.copyWith(color: Colors.white),
               ),
             ),
